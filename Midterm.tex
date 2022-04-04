@@ -1,0 +1,586 @@
+\documentclass[UTF8]{ctexart}
+
+\usepackage[left=2.0cm, right=2.0cm, top=2.50cm, bottom=3.0cm]{geometry} %页边距
+\usepackage{helvet}
+\usepackage{amsmath, amsfonts, amssymb} % 数学公式、符号
+\usepackage[english]{babel}
+\usepackage{graphicx}   % 图片
+\usepackage{url}        % 超链接
+\usepackage{bm}         % 加粗方程字体
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{enumerate}  % 编号
+\usepackage{csvsimple}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{changepage}
+\usepackage{graphicx}
+\usepackage{makecell}
+\usepackage{indentfirst}
+\usepackage{listings} 
+\usepackage{amsmath,bm}
+\usepackage{mathrsfs}
+%\usepackage{overcite}
+
+\newcommand{\mycite}[1]{\scalebox{0.8}[0.6]{\raisebox{1.4ex}{\cite{#1}}}}
+
+\setlength{\parindent}{2em}
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}       
+\renewcommand{\algorithmicensure}{ \textbf{Initialize:}} 
+\renewcommand{\algorithmicreturn}{ \textbf{Output:}}     
+%算法格式  
+
+
+
+
+%定义新的table figure环境
+\makeatletter
+\newenvironment{tablehere}
+{\def\@captype{table}}
+{}
+
+\newenvironment{figurehere}
+{\def\@captype{figure}}
+{}
+\makeatother
+%定义新的table figure环境
+
+
+\linespread{1.27}%设置行距
+
+
+%页眉、页脚设置
+\usepackage{Lastpage}%计算总页数
+\usepackage{fancyhdr} 
+\pagestyle{fancy}
+\lhead{2019300001104}
+\chead{Midterm Project for Solid State Physics}
+\rhead{Ziyan Li}
+\lfoot{}
+\cfoot{\thepage\ of \pageref{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}%改为0pt即可去掉页眉下面的横线
+\renewcommand{\footrulewidth}{0pt}%改为0pt即可去掉页脚上面的横线
+%页眉、页脚设置
+
+
+\usepackage{hyperref} %bookmarks
+\hypersetup{colorlinks, bookmarks, unicode} %unicode
+\usepackage{multicol} %分栏
+
+
+\date{}%禁用日期
+
+\setlength\columnsep{0.87cm}%设置两栏之间间距
+
+\newcommand{\upcite}[1]{\textsuperscript{\small \cite{#1}}}%引用格式
+
+
+
+%以上为头文件
+
+%---------分割线---------------分割线--------------分割线---------------------分割线---------------分割线-----------------分割线----------------分割线----------------------
+
+%以下为本体
+
+\begin{document}
+	
+	\renewcommand{\contentsname}{目录} %修改中文目录
+	
+	%标题、作者、单位
+	\begin{center}
+		~\\[14pt]
+		\textbf{\fontsize{18pt}{\baselineskip}\selectfont A Review on Aluminum and Silicon}~\\[18pt]
+		\kaishu{ \fontsize{14pt}{\baselineskip}\selectfont 李梓演（Ziyan Li, 2019300001104）}~\\[0pt]
+		\kaishu \fontsize{12pt}{\baselineskip}\selectfont {(School of Physical Science and Technology, Wuhan University, Wuhan, Hubei, China\ \ 430072）
+			%\\（2020 \ 年\ \ 月\ \ 日）
+		}
+	\end{center}
+	%标题作者单位日期
+	
+	
+	~\\[-32pt]
+	
+	
+	
+	%摘要、关键词
+	\begin{adjustwidth}{0.75cm}{0.75cm}%改变片段页边距
+		{
+			\linespread{1.17} \selectfont
+			\noindent{\fontsize{12pt}{\baselineskip}\selectfont{\bf{Abstract: }}\songti Both aluminum and silicon are the common solid materials. They have periodic structure and some property which are interesting. This review will focus on these two elemental solids including their discovery history, the production process, phonons branches, applications and so on. Moreover, some comments will be made about how these two solids are associated to the Nobel Prize. Due to the limitiation of pages, more details could be found in the references.}\\
+		}
+		\noindent{\fontsize{12pt}{\baselineskip}\selectfont{\bf{ Key Words：}}\songti Soilds, Phonon Branches, Bands Structure\fontsize{12pt}{\baselineskip}\selectfont{\\} }
+	\end{adjustwidth}
+	%摘要、关键词
+	
+	
+	%英文 标题、作者、单位
+	\begin{center}
+		~\\[14pt]
+		\textbf{\fontsize{18pt}{\baselineskip}\selectfont Calculation of Density of States and Energy Band of Three-Layer Graphene(RTG)}~\\[18pt]
+		{ \fontsize{14pt}{\baselineskip}\selectfont Li Ziyan（2019300001104）}~\\[0pt]
+		\fontsize{10.5pt}{\baselineskip}\selectfont {（School of Physics and Technology, Wuhan University, Wuhan, Hubei\ \ 430072）
+			%\\（2020 \ 年\ \ 月\ \ 日）
+		}
+	\end{center}
+	%英文 标题、作者、单位
+	
+	
+	~\\[-32pt]
+	
+	
+	%英文摘要、关键词
+	\begin{adjustwidth}{0.75cm}{0.75cm}%改变片段页边距
+		{
+			\linespread{1.17} \selectfont
+			\noindent{\fontsize{9pt}{\baselineskip}\selectfont{\bf{Abstract:}}The calculation of energy band and density of states is one of the more basic problems in the calculation of condensed matter, and it is also the basic calculation method that must be mastered. This article is based on the Hamiltonian matrix formula of three-layer graphene provided in the literature, and first uses the matrix diagonalization The method calculates the distribution of high symmetric points in the first Brillouin zone, and then calculates the distribution of its density of states by randomly sprinkling points in the first Brillouin zone. }\\
+		}
+		\noindent{\fontsize{9pt}{\baselineskip}\selectfont{\bf{Keywords:}}Vacuum method,Vacuum gauge pressure \fontsize{9pt}{\baselineskip}\selectfont{\\} }
+	\end{adjustwidth}
+	%英文摘要、关键词
+	
+	
+	%\tableofcontents%目录
+	
+	%小标题格式设置
+	\ctexset{
+		section/titleformat=\raggedright%设置靠左
+	}
+	\titleformat*{\section}{\fontsize{12pt}{\baselineskip}\selectfont \heiti}
+	\titleformat*{\subsection}{\fontsize{10.5pt}{\baselineskip}\selectfont \heiti}
+	\titleformat*{\subsubsection}{\fontsize{10.5pt}{\baselineskip}\selectfont \kaishu}
+	%\newpage
+	%小标题格式设置		
+	
+	
+	%---------分割线---------------分割线--------------分割线---------------------分割线---------------分割线-----------------分割线----------------分割线----------------------
+	
+	%以下为正文
+	
+	\begin{multicols}{2}%分两栏,从这里开始分为两栏
+		
+		%~\\[-37pt]
+		\linespread{1.1}%行距设置
+		\setlength{\parskip}{0em}%段落间距设置
+		
+		
+		%	\section{引 \ \ 言}
+		引 \ 言：
+		\fontsize{10.5pt}{\baselineskip}\selectfont 
+		运用对角化与随机撒点方法来计算一些特定二维材料的能带与态密度是凝聚态计算中的一些基础的方法，掌握这些方法的过程也有助于对量子力学背景下的的二维材料图像有进一步的认知，因为利用哈密顿量计算出来的能带与态密度对于后续计算二维材料的导电性、临界温度都十分重要。
+		
+		\section{背景介绍}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.5\textwidth]{RTG.png}
+		\end{figure}
+		
+		%\begin{figure}[H]
+		%	\centering
+		%	\includegraphics[width=.5\textwidth]{RTG.png}
+		%	\caption{旋片式真空泵结构图}
+		%\end{figure}
+        
+        Figure1为三层石墨烯(RTG)的晶格结构，三层的石墨烯以一定的规律排列，从而构成一定的空间结构，而由这些碳原子提供的电子则会在整个空间上存在一定的分布，再加上整个二维材料具有一定的周期性，可以通过一个原胞的周期性扩展到整个空间，所以而这些电子在倒格子空间(k空间)中的能带分布(即E与k的关系)则可以通过k空间中的哈密顿量对角化来实现。而哈密顿量在k空间中的矩阵已经由文献给出(见下图)。
+        
+        
+        其中的参数$\gamma_0=3.1,\gamma_1=0.38,\gamma_2=-0.015,\gamma_3=0.29,\gamma_4=0.141,\delta=-0.0105,\Delta_2=-0.0023$
+        
+        而本文所做的是对于所给矩阵，利用对角化的方法从而对每一个k值可以求出相应的特征值$E_{nk}$，从而绘制出相应的的$E(k)$曲线。而通过对倒空间中的第一布里渊区随机撒k点从而统计对单位能量范围内所具有相应特征值数目的占比从而得到态密度。
+		
+		\section{正文}
+		\subsection{哈密顿矩阵的建立}
+
+        按照文献中的参数构建一个哈密顿矩阵(6*6)，用于求能带与态密度。
+        
+        \subsection{能带的计算}
+
+        通过对角化计算出每一个k对应哈密顿矩阵的特征值，从而求出$E_{nk}$,并将其储存在一个列表中，从而便于后续绘制E(k)图像。
+        
+        \subsection{第一布里渊区的建立}
+
+        建立第一布里渊区主要是为了在其中随机撒k点，这一部分的代码是将处于第一布里渊区的k点给筛选出来，从而进行下一步的态密度的求解。
+        
+        \subsection{态密度的计算}
+
+        态密度的计算主要是通过在第一布里渊区中随机撒上k点来统计不同的特征值的概率分布，从而绘制出态密度(DOS)与能量(E)的统计关系式。
+       
+    
+		
+		\section{结果与结论} 
+		\subsection{高对称点上的能带图}
+
+	    利用数值计算的方法来求出能带的结果如上，所取得k点都是链接第一布里渊区里的高对称点。
+	    
+	    \subsection{布里渊区里的态密度}
+
+	    这是通过数值计算求出的态密度图，由于随机撒点的数目越多，计算的精确度越高，但计算所耗费的时间也会随之增加，所以本文只设置了60000个k点数，计算结果中的起伏波动是因为精确度不够导致，但本文目的只在于揭示数值方法的可靠性。
+		\par
+		
+		
+		%参考文献
+		%\iffalse
+		\titleformat*{\section}{\bf\heiti}
+		\renewcommand\refname{参考文献}
+		\begin{thebibliography}{100}%此处数字为最多可添加的参考文献数量
+			\bibitem{article1}Superconductivity from Repulsive Interactions in Rhombohedral Trilayer Graphene: a Kohn-Luttinger-Like Mechanism, Tommaso Cea, Pierre A. Pantaleon, Sept 10,2021%title author journal data pages
+			\bibitem{article2}Superconductivity from nonphonon interaction, M.Grabowski, L.J.Sham, Sept 19,1983%title author journal data pages
+			
+			%\bibitem{book1} DH-UGC-A空气密度与气体普适常数测量仪说明书，杭州大华仪器制造有限公司%title author publish date
+		\end{thebibliography}
+		%\fi
+		%参考文献
+	\end{multicols}%结束分栏
+    
+    \newpage
+    \section{附录}
+	\begin{lstlisting}
+		# bands structure of RTG
+		import time
+		import random
+		import numpy as np
+		import matplotlib.pyplot as plt
+		from numpy.linalg import solve
+		#################################
+		"""
+		Construction of the Hamition Matrix
+		"""
+		
+		#Parameter definition
+		def para_u(k):
+			kx = k[0]
+			ky = k[1]
+			kz = k[2]
+			a = 0.246
+			u = 1 + 2*np.cos(kx*a/2)*np.exp(-1j*ky*a*np.sqrt(3)/2)
+			return u
+			
+		def para_v(k):
+			kx = k[0]
+			ky = k[1]
+			a = 0.246
+			v = np.exp(1j*ky*a*np.sqrt(3))*para_u(k)
+			return v
+			
+		def Htb_ini(k):
+			Htb = np.zeros((6,6),dtype=complex)
+			y0,y1,y2,y3,y4 = 3.1,0.38,-0.015,0.29,0.141
+			dta,D1,D2 = -0.0105,0.05,-0.0023
+
+			Htb[0,0],Htb[0,1],Htb[0,2],Htb[0,3]=D1+D2,
+			-y0*para_u(k),y4*np.conjugate(para_u(k)),y1
+			
+			Htb[1,0],Htb[1,1],Htb[1,2],Htb[1,3]=
+			-y0*np.conjugate(para_u(k)),D1+D2+dta,y3*para_v(k),
+			y4*np.conjugate(para_u(k))
+			Htb[1,4] = y2/2
+			
+			Htb[2,0],Htb[2,1],Htb[2,2],Htb[2,3]=y4*para_u(k),
+			y3*np.conjugate(para_v(k)),-2*D2,-y0*para_u(k)
+			Htb[2,4],Htb[2,5] = y4*np.conjugate(para_v(k)),y1
+			
+			Htb[3,0],Htb[3,1],Htb[3,2],Htb[3,3]=y1,
+			y4*para_u(k),-y0*np.conjugate(para_u(k)),-2*D2
+			Htb[3,4], Htb[3,5] = y3*para_u(k),y4*np.conjugate(para_u(k))
+			
+			Htb[4,1],Htb[4,2],Htb[4,3],Htb[4,4]=y2/2.,
+			y4*para_v(k),y3*np.conjugate(para_u(k)),D2-D1+dta
+			Htb[4,5] = -y0*para_v(k)
+			
+			Htb[5,2],Htb[5,3],Htb[5,4],Htb[5,5]=y1,y4*para_u(k),
+			-y0*np.conjugate(para_v(k)),D2-D1
+			return Htb
+		#############################################
+		"""
+		Band Structure of the RTG
+		"""
+		def Enk(n,k):
+			# n = 0,1,2,3,4,5
+			EigVal, EigVec = np.linalg.eig(Htb_ini(k))
+			EigVal.sort()
+			E_n_k = EigVal[n]
+			return EigVal
+		
+		# to get N points between K1,K2(totally N+2 points)
+		def Get_K(K1,K2,N):
+			x1,y1,z1 = K1[0],K1[1],K1[2]
+			x2,y2,z2 = K2[0],K2[1],K2[2]
+			K = []
+			para_x = (x2-x1)/N
+			para_y = (y2-y1)/N
+			para_z = (z2-z1)/N
+			for i in range(N):
+			MK = (x1+para_x*i,y1+para_y*i,z1+para_z*i)
+			K.append(MK)
+			return K
+		
+		def En(n,K_resolution):
+			a = 0.246
+			b = a/np.sqrt(3)
+			para = 2*np.pi/(1.5*a*b)
+			G = (0,0,0)
+			M = (-0.25*a*para*np.sqrt(3.),-0.25*a*para,0)
+			K = (-0.5*a*para/np.sqrt(3.),-0.5*a*para,0)
+			M2 = (0.25*a*para*np.sqrt(3.),0.25*a*para,0)
+			K2 = (0.5*a*para/np.sqrt(3.),0.5*a*para,0)
+		
+			K1,K2,K3=Get_K(K,G,K_resolution),
+			Get_K(G,K2,K_resolution),Get_K(K2,M2,K_resolution)
+			K4,K5,K6=Get_K(M2,G,K_resolution),
+			Get_K(G,M,K_resolution),Get_K(M,K,K_resolution)
+			K_points = K1+K2+K3+K4+K5+K6
+			K_num = len(K_points)
+			
+			E_n = []
+			for i in range(K_num):
+			E_nk = Enk(n,K_points[i])
+			E_nk_real = E_nk.real
+			E_n.append(E_nk_real)
+			# Get real part
+			# Get the original points
+			E_n0 = Enk(n,K_points[0])
+			E_n0_real = E_n0.real
+			E_n.append(E_n0_real)
+			return E_n
+		
+		def dis(P1,P2):
+			x1,y1,z1 = P1[0],P1[1],P1[2]
+			x2,y2,z2 = P2[0],P2[1],P2[2]
+			Distance = np.sqrt((x1-x2)**2+(y1-y2)**2+(z1-z2)**2)
+			return Distance
+		
+		def S_K(K,G,K2,M2,M,resolution):
+			SP = []
+			K_KG = Get_K(K, G, resolution)
+			L_KG = len(K_KG)
+			for i in range(L_KG):
+			Dis = dis(K,K_KG[i])
+			SP.append(Dis)
+			
+			D_KG = dis(K,G)
+			K_GK2 = Get_K(G, K2, resolution)
+			L_GK2 = len(K_GK2)
+			for i in range(L_GK2):
+			Dis = dis(G,K_GK2[i])+D_KG
+			SP.append(Dis)
+			
+			D_GK2 = dis(G,K2)
+			K_K2M2 = Get_K(K2, M2, resolution)
+			L_K2M2= len(K_K2M2)
+			for i in range(L_K2M2):
+			Dis = dis(K2,K_K2M2[i])+D_KG+D_GK2
+			SP.append(Dis)
+			
+			D_K2M2 = dis(K2,M2)
+			K_M2G = Get_K(M2, G, resolution)
+			L_M2G= len(K_M2G)
+			for i in range(L_M2G):
+			Dis = dis(M2,K_M2G[i])+D_KG+D_GK2+D_K2M2
+			SP.append(Dis)
+			
+			D_M2G = dis(M2,G)
+			K_GM = Get_K(G, M, resolution)
+			L_GM= len(K_GM)
+			for i in range(L_GM):
+			Dis = dis(G,K_GM[i])+D_KG+D_GK2+D_K2M2+D_M2G
+			SP.append(Dis)
+			
+			D_GM = dis(G,M)
+			K_MK = Get_K(M, K, resolution)
+			L_MK= len(K_MK)
+			for i in range(L_MK):
+			Dis = dis(M,K_MK[i])+D_KG+D_GK2+D_K2M2+D_M2G+D_GM
+			SP.append(Dis)
+			
+			D_MK = dis(M,K)
+			SP.append(D_KG+D_GK2+D_K2M2+D_M2G+D_GM+D_MK)
+			return SP	
+			
+		def Plt_Bands():
+			K_resolution = 100
+			a = 0.246
+			b = a/np.sqrt(3)
+			para = 2*np.pi/(1.5*a*b)
+			G = (0,0,0)
+			K = (-0.5*a*para,-0.5*a*para/np.sqrt(3),0)
+			M = (-0.5*a*para, 0, 0)
+			M2 = (0.5*a*para,0,0)
+			K2 = (0.5*a*para,0.5*a*para/np.sqrt(3),0)
+			
+			k_position = S_K(K,G,K2,M2,M,K_resolution)
+			E0 = En(0, K_resolution)
+			E1 = En(1, K_resolution)
+			E2 = En(2, K_resolution)
+			E3 = En(3, K_resolution)
+			E4 = En(4, K_resolution)
+			E5 = En(5, K_resolution)
+			
+			plt.plot(k_position,E0)
+			plt.plot(k_position,E1)
+			plt.plot(k_position,E2)
+			plt.plot(k_position,E3)
+			plt.plot(k_position,E4)
+			plt.plot(k_position,E5)
+			plt.show()
+			
+			Plt_Bands()
+		
+		#####################
+		"""
+		Calculation of DOS using diagnolization
+		"""
+		def y_cross(p1,p2,p):
+			x1,y1,x2,y2 = p1[0],p1[1],p2[0],p2[1]
+			x,y = p[0],p[1]
+			
+			cross_y = y2+(y1-y2)/(x1-x2)*(x-x2)
+			return cross_y
+		
+		def inside(k):
+			a = 0.246
+			b = a/np.sqrt(3)
+			para = 2*np.pi/(1.5*a*b)
+			G = (0,0,0)
+			M = (0.25*a*para*np.sqrt(3.),0.25*a*para,0)
+			K = (0.5*a*para/np.sqrt(3.),0.5*a*para,0)
+			
+			x1,y1,x2,y2,x3,y3 = G[0],G[1],M[0],M[1],K[0],K[1]
+			kx,ky = k[0],k[1]
+			
+			if (kx<x1) or (kx>x2):
+			return False
+			else:
+			if (kx>=x1) and (kx<x3):
+			if (ky>=y_cross(G,M,k)) and (ky<=y_cross(G,K,k)):
+			return True
+			else:
+			return False
+			else:
+			if (ky>=y_cross(G,M,k)) and (ky<=y_cross(M,K,k)):
+			return True
+			else:
+			return False
+		
+		def DOS(Nk):
+			a = 0.246
+			b = a/np.sqrt(3)
+			para = 2*np.pi/(1.5*a*b)
+			# Nk is the number of k
+			Dos = (np.zeros((140,1)))
+			# -12.45+n*0.1, n = 0,1,224
+			for i in range(Nk):
+			k=(random.uniform(0.,0.25*a*para*np.sqrt(3.)),random.uniform(0.,0.5*a*para),0)
+			if inside(k):
+			for n in range(6):
+			for j in range(140):
+			if (Enk(n, k)>=(-0.70+j*0.01)) and (Enk(n,k)<(-0.69+j*0.01)):
+			Dos[j]=Dos[j]+1
+			return Dos
+		
+		def Plt_DOS():
+			Nk = 100000
+			Dos = DOS(Nk)
+			E = (np.zeros((140, 1)))
+			for i in range(140):
+			E[i] = -0.695+i*0.01
+			plt.scatter(E, Dos)
+			plt.plot(E, Dos)
+			plt.show()
+		
+	\end{lstlisting}
+	
+\end{document}
+
+%正文结束
+
+%---------分割线---------------分割线--------------分割线---------------------分割线---------------分割线-----------------分割线----------------分割线----------------------
+
+
+%以下为常用工具
+
+%修改字号(特定文本)
+\iffalse
+
+\fontsize{7.0pt}{\baselineskip}\selectfont 文字
+
+\fi
+%修改字号
+
+%插入图片
+\iffalse
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.5\textwidth]{文件名}
+	\caption{图题}
+\end{figure}
+
+
+\fi
+%插入图片
+
+
+
+%换行与单行缩进
+\iffalse
+
+\par \hspace*{x cm}
+
+\fi
+%换行与单行缩进
+
+
+
+%编号(attention:尽量手写)
+\iffalse
+
+\begin{enumerate}[编号格式如 i)]
+	\item{}
+	\item{}
+\end{enumerate}
+
+\fi
+%编号
+
+
+%行间公式插入
+
+\iffalse
+
+\begin{equation}
+	\rho=\frac{m_1-m_0}{V}
+\end{equation}
+
+\fi
+%行间公式插入
+
+
+
+%插入表格
+\iffalse
+
+
+\begin{tablehere}
+	\renewcommand\arraystretch{1.3} 
+	\setlength{\abovecaptionskip}{0cm}%改变表格标题位置
+	\setlength{\belowcaptionskip}{0cm}%改变表格位置
+	\begin{centering}
+		\caption{\heiti \fontsize{9pt}{\baselineskip}\selectfont 表题}
+		\scalebox{0.8}{
+			\begin{tabular}{p{30pt}<{\centering} }
+				%三线表
+				\toprule%粗线
+				
+				\midrule
+				
+				\bottomrule%粗线
+			\end{tabular}
+		}
+	\end{centering}
+\end{tablehere}
+
+\fi
+%插入表格
